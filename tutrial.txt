@@ -1,0 +1,23 @@
+In Java RMI (Remote Method Invocation), the LocalRegistry is a utility class that provides methods for managing remote objects
+that are registered in the local registry on the server side. The LocalRegistry is used in RMI to maintain a registry of remote
+objects that can be looked up by clients to invoke remote methods.
+
+The LocalRegistry class typically provides the following methods:
+
+bind(String name, Remote obj):
+    This method binds a remote object to the local registry with a given name.
+    The name parameter is a string that represents the name by which the remote object can be looked up,
+    and the obj parameter is the remote object that is being registered.
+
+unbind(String name):
+    This method unbinds a remote object from the local registry with the given name.
+    The name parameter is the string name of the remote object that is being unbound.
+
+rebind(String name, Remote obj):
+    This method rebinds a remote object to the local registry with the given name.
+    If the name already exists in the registry, it is replaced with the new remote object. If the name does not exist,
+    a new entry is created. The name parameter is the string name of the remote object, and the obj parameter is the remote object that is being rebound.
+
+lookup(String name):
+    This method looks up a remote object in the local registry with the given name and returns a reference to that remote object.
+    The name parameter is the string name of the remote object that is being looked up.
